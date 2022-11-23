@@ -1,0 +1,229 @@
+// Colors
+
+$black: #393939;
+$off-white: #ededed;
+$dark-gray: #666;
+$medium-gray: #6c757d;
+$light-gray: #c2c2c2;
+$blue: #237bbe;
+$light-blue: lighten($blue, 40%);
+$orange: #e8890c;
+$yellow: #ffc107;
+$light-yellow: #ffc;
+$red: #dc3545;
+
+// Custom Variables
+
+$secondary-text-color: $medium-gray;
+$accent-color: $orange;
+$secondary-link-color: $light-blue;
+$border-color: $light-gray;
+$error-color: $red;
+$error-background-color: $light-yellow;
+$sold-out-color: $yellow;
+
+// Bootstrap Variable Overrides
+
+$body-color: $black;
+$body-bg: $off-white;
+$primary: $blue;
+$secondary: $dark-gray;
+
+// Import Bootstrap Styles
+
+@import "bootstrap";
+
+//Header and Nav
+header {
+    background-color: #f2f2f2;
+    padding: 0.5rem;
+    margin-bottom: 3rem;
+    border-bottom: 0.5px solid gainsboro;
+
+    nav {
+        @extend .navbar, .navbar-expand-md;
+
+        h1 > a {
+            color: $black;
+            margin-right: 15px;
+            font-size: 2.5rem;
+            text-decoration: none;
+        }
+        h1 > a:hover{
+            text-decoration: none;
+            color: dimgray;
+        }
+
+        ul {
+            @extend .nav, .navbar-nav;
+            letter-spacing: 1px;
+
+            &.left {
+                @extend .mr-auto;
+            }
+
+            li {
+                @extend .nav-item;
+                font-size: 1.1rem;
+                margin-right: 1px;
+
+                a {
+                    @extend .nav-link;
+                    color: #393939;
+                    padding-bottom: 1px;
+                }
+                a.active{
+                    color: dimgray;
+                    border-bottom: 1px solid dimgray;
+                }
+            }
+        }
+    }
+}
+section.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    .button {
+        color: white;
+        padding: 0.7em 1.7em;
+        border-radius: 0.5em;
+        background: #237bbe;
+    }
+    .button:hover{
+        text-decoration: none;
+    }
+}
+
+// Articles Index Page
+
+section.articles{
+    padding: 15px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    
+    .summary {
+        padding: 15px;
+        border: 1px solid rgb(205, 205, 205);
+        margin: 10px;
+        
+        h4{
+            color: dimgray;
+        }
+        p {
+            margin-top: 1.1rem;
+        }
+        .button{
+            margin-bottom: 10px;
+            color: dimgray;
+            padding: 0.5em 1em;
+            border: 1px solid black;
+            
+        }
+        .button:hover{
+            text-decoration: none;
+            background-color: dimgray;
+            color:white;
+        }
+    }
+}
+
+// Article Show Page
+
+section.article-details {
+    padding: 20px;
+
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .actions {
+        padding: 15px;
+        
+    }
+    img {
+        height: 20px;
+        width: 20px;
+        margin-right: 15px;
+    }
+    p.article-body {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .comment {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #e0e0e0;
+        margin-top: 1px;
+        margin-bottom: 20px;
+    }
+    input[type = text] {
+        width: 100%;
+        height: 30px;
+        padding: 15px;
+        border: 1px solid rgb(205, 205, 205);
+    }
+    textarea {
+        width: 100%;
+        height: 80px;
+        padding: 15px;
+        border: 1px solid rgb(205, 205, 205);
+    }
+    input[type = submit] {
+        color: white;
+        padding: 0.7em 1.7em;
+        border-radius: 0.5em;
+        background: #237bbe;
+        margin-top: 20px;
+        border: 1px solid #e8e8e8;
+    }
+    select {
+        height: 30px;
+        padding:5px;
+    }
+    div.bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+h1.title{
+    margin-left: 15px;
+}
+section.form{
+    padding: 20px;
+    border: 1px solid rgb(205, 205, 205);
+    border-radius: 10px;
+    background-color: white;
+    margin: 15px;
+    
+    input[type=text]{
+        width: 100%;
+        height: 30px;
+        padding: 15px;
+        border: 1px solid rgb(205, 205, 205);
+        margin-bottom: 15px;
+    }
+    textarea{
+        width: 100%;
+        height: 70px;
+        padding: 15px;
+        border: 1px solid rgb(205, 205, 205);
+    }
+    input[type = submit] {
+        color: white;
+        padding: 0.7em 1.7em;
+        border-radius: 0.5em;
+        background: #237bbe;
+        margin-top: 20px;
+        border: 1px solid #e8e8e8;
+    }
+}
