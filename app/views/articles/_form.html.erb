@@ -11,7 +11,7 @@
         <div class="body">
             <strong><%= form.label :body %><br></strong>
             <%= form.text_area :body %>
-            <% @article.errors.full_messages_for(:title).each do |message| %>
+            <% @article.errors.full_messages_for(:body).each do |message| %>
                 <div><%= message %>
             <% end %>
         </div>
